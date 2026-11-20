@@ -134,7 +134,7 @@ footer a{color:var(--td);font-weight:700;text-decoration:none}
  <a class="btn" href="#top">Kursga yozilish</a>
 </div></div></section>
 
-<section style="background:var(--bg)"><div class="w">
+<section id="results-sec" style="background:var(--bg)"><div class="w">
  <h2>Oʻquvchilarimiz natijalari</h2>
  <div class="res" id="results"></div>
 </div></section>
@@ -155,10 +155,20 @@ footer a{color:var(--td);font-weight:700;text-decoration:none}
 
 <script>
 // ===== SOZLAMA: Make.com / n8n webhook URL =====
-const WEBHOOK_URL = "";
+const WEBHOOK_URL = "https://hook.us2.make.com/opt4yw38qdbyw2uevm7dn8nygidj9t7r";
 
-document.getElementById("results").innerHTML = [1,2,3,4].map(i =>
-  `<img loading="lazy" src="https://www.hilaledu.uz/results/tys-${i}.jpg" alt="TYS natija" onerror="this.style.display='none'">`).join("");
+// Natija rasmlari: results/1.jpg ... results/6.jpg (papkaga oʻzingiz qoʻyasiz). Hech biri topilmasa, boʻlim yashirinadi.
+(function(){
+  const box = document.getElementById("results");
+  let bad = 0, N = 6;
+  for (let i = 1; i <= N; i++) {
+    const im = new Image();
+    im.loading = "lazy"; im.alt = "Natija";
+    im.onerror = () => { im.remove(); if (++bad === N) document.getElementById("results-sec").style.display = "none"; };
+    im.src = "results/" + i + ".jpg";
+    box.appendChild(im);
+  }
+})();
 
 // "Kursga yozilish" tugmalari formani ochadi
 document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener("click", e => {
