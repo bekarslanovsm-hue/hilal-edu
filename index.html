@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Offlayn turk tili kursi — 4 oyda natija yoki pulingiz qaytadi | Hilal Edu</title>
-<meta name="description" content="Toshkent, Buxoro va Xorazmdagi filiallarda offlayn turk tili kursi. 4 oyda natija kafolati — natija boʻlmasa toʻlov 100% qaytariladi.">
-<meta property="og:title" content="Offlayn turk tili kursi — 4 oyda natija yoki pulingiz qaytadi">
+<title>Turk tili kursi (offlayn va onlayn) — 4 oyda natija yoki pulingiz qaytadi | Hilal Edu</title>
+<meta name="description" content="Offlayn (Toshkent, Buxoro, Xorazm) va onlayn turk tili kursi. 4 oyda natija kafolati — natija boʻlmasa toʻlov 100% qaytariladi.">
+<meta property="og:title" content="Turk tili kursi — 4 oyda natija yoki pulingiz qaytadi">
 <meta property="og:image" content="https://hilaledu.uz/hilal-logo.png">
 <meta name="theme-color" content="#14b8a6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,6 +49,11 @@ label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
 label small{color:var(--mut);font-weight:600}
 input{width:100%;font:inherit;font-size:16px;padding:14px;border:2px solid #e2e8f0;border-radius:12px;margin-bottom:14px;outline:0}
 input:focus{border-color:var(--t)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.seg label{margin:0;cursor:pointer}
+.seg input{display:none}
+.seg span{display:block;text-align:center;padding:12px 8px;border:2px solid #e2e8f0;border-radius:12px;font-weight:700;font-size:15px;transition:.15s}
+.seg input:checked+span{border-color:var(--t);background:var(--tl);color:var(--td)}
 .note{font-size:12px;color:var(--mut);text-align:center;margin-top:10px}
 .ok{display:none;text-align:center;padding:24px 0}.ok h3{font-size:22px;margin:8px 0}
 .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
@@ -85,8 +90,8 @@ footer a{color:var(--td);font-weight:700;text-decoration:none}
 
 <section class="hero"><div class="w g">
  <div>
-  <span class="tag">📍 Offlayn kurs · Toshkent, Buxoro, Xorazm</span>
-  <h1>Turk tilini filialda oʻrganing: <span>4 oyda natija yoki pulingiz qaytadi</span></h1>
+  <span class="tag">📍 Offlayn va onlayn · Toshkent, Buxoro, Xorazm</span>
+  <h1>Turk tilini HILAL EDUda oʻrganing: <span>4 oyda natija yoki pulingiz qaytadi</span></h1>
   <p>Oʻrta Osiyodagi eng katta turk tili markazi — 12 000+ bitiruvchi.</p>
   <ul class="chk">
    <li>C1 darajali tajribali ustozlar</li>
@@ -98,6 +103,11 @@ footer a{color:var(--td);font-weight:700;text-decoration:none}
   <div id="fields">
    <h3>Kursga yozilish</h3>
    <p class="s">Raqamingizni qoldiring — menejer tez orada qoʻngʻiroq qiladi</p>
+   <label>Qaysi formatda oʻqimoqchisiz?</label>
+   <div class="seg">
+    <label><input type="radio" name="fmt" value="Offline" checked><span>🏫 Offlayn</span></label>
+    <label><input type="radio" name="fmt" value="Online"><span>💻 Onlayn</span></label>
+   </div>
    <label for="name">Ismingiz *</label>
    <input id="name" type="text" placeholder="Ismingizni yozing" autocomplete="name">
    <label for="phone">Telefon raqamingiz *</label>
@@ -203,7 +213,7 @@ document.getElementById("f").addEventListener("submit", async e => {
   if (!a || !b) return;
   const btn = document.getElementById("sb");
   btn.disabled = true; btn.textContent = "Yuborilmoqda...";
-  const payload = { name, phone, telegram: tg ? "@" + tg.replace(/^@/, "") : "", course: "Offline", page: location.href.split("?")[0], ...utm, time: new Date().toISOString() };
+  const payload = { name, phone, telegram: tg ? "@" + tg.replace(/^@/, "") : "", course: (document.querySelector('input[name="fmt"]:checked')||{}).value || "Offline", page: location.href.split("?")[0], ...utm, time: new Date().toISOString() };
   try {
     if (WEBHOOK_URL) await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
     else console.log("LEAD", payload);
