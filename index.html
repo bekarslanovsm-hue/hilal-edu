@@ -7,7 +7,7 @@
 <meta name="description" content="Offlayn (Toshkent, Buxoro, Xorazm) va onlayn turk tili kursi. 4 oyda natija kafolati — natija boʻlmasa toʻlov 100% qaytariladi.">
 <meta property="og:title" content="Turk tili kursi — 4 oyda natija yoki pulingiz qaytadi">
 <meta property="og:image" content="https://hilaledu.uz/hilal-logo.png">
-<meta name="theme-color" content="#14b8a6">
+<meta name="theme-color" content="#0b1b3a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
@@ -19,90 +19,141 @@ fbq('init','1731422865199745');fbq('track','PageView');
 </script>
 
 <style>
-:root{--t:#14b8a6;--td:#0f766e;--tl:#ccfbf1;--ink:#0f172a;--mut:#475569;--bg:#f8fafc}
+:root{--navy:#0b1b3a;--deep:#0a3d62;--t:#14b8a6;--td:#0f766e;--tl:#ccfbf1;--ink:#0f172a;--mut:#475569;--bg:#f1f5f9;
+--g1:linear-gradient(135deg,#0b1b3a 0%,#0a3d62 45%,#0d9488 100%);
+--cta:linear-gradient(135deg,#5eead4,#14b8a6 60%,#06b6d4)}
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;padding-top:env(safe-area-inset-top,0px)}
 body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
 .w{max-width:1040px;margin:0 auto;padding:0 20px}
-section{padding:48px 0}
-h1{font-size:clamp(28px,5vw,46px);line-height:1.12;font-weight:800;letter-spacing:-.02em}
-h1 span{color:var(--td)}
-h2{font-size:clamp(22px,3.2vw,32px);font-weight:800;margin-bottom:22px;text-align:center}
-.btn{display:block;width:100%;background:var(--t);color:#fff;font-weight:800;font-size:17px;padding:16px;border-radius:14px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;text-align:center;box-shadow:0 8px 24px rgba(20,184,166,.35);transition:.2s}
-.btn:hover{background:var(--td)}
-.btn:disabled{opacity:.7}
-header{padding:12px 0;border-bottom:1px solid #e2e8f0}
-header .w{display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800}
+section{padding:52px 0}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.12;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(22px,3.2vw,32px);font-weight:800;margin-bottom:24px;text-align:center}
+.btn{display:block;width:100%;background:var(--cta);color:#042f2e;font-weight:800;font-size:18px;padding:17px 22px;border-radius:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;text-align:center;box-shadow:0 10px 28px rgba(20,184,166,.45);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(20,184,166,.55)}
+.btn:disabled{opacity:.7;transform:none}
+.hero{background:var(--g1);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-160px;background:radial-gradient(circle,rgba(45,212,191,.35),transparent 65%)}
+.top{padding:14px 0}
+.top .w{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff}
 .logo img{width:36px;height:36px;border-radius:10px}
-.tel{color:var(--td);font-weight:800;text-decoration:none}
-.hero{background:linear-gradient(135deg,#f0fdfa,#e0f2fe);padding:40px 0 48px}
-.hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-.tag{display:inline-block;background:var(--tl);color:var(--td);font-weight:800;font-size:13px;padding:6px 14px;border-radius:99px;margin-bottom:14px}
-.hero p{color:var(--mut);margin:14px 0 18px;font-size:17px}
-.chk{list-style:none;font-weight:600}
-.chk li{padding:4px 0}.chk li:before{content:"✓";color:#fff;background:var(--t);border-radius:50%;display:inline-block;width:22px;height:22px;text-align:center;font-size:13px;line-height:22px;margin-right:10px}
-form{background:#fff;border-radius:22px;padding:26px;box-shadow:0 20px 50px rgba(15,23,42,.14)}
-form h3{font-size:20px;margin-bottom:4px}
-form .s{color:var(--mut);font-size:14px;margin-bottom:16px}
+.tel{color:#fff;font-weight:800;text-decoration:none;background:rgba(255,255,255,.14);padding:8px 14px;border-radius:99px;font-size:14px}
+.hh{padding:44px 0 64px;position:relative;max-width:700px}
+.tag{display:inline-block;background:rgba(255,255,255,.16);color:#a7f3d0;font-weight:800;font-size:13px;padding:7px 14px;border-radius:99px;margin-bottom:16px}
+.hh h1 span{background:linear-gradient(90deg,#5eead4,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hh p{color:#cbd5e1;margin:16px 0 18px;font-size:18px}
+.chk{list-style:none;font-weight:600;margin-bottom:26px}
+.chk li{padding:5px 0}.chk li:before{content:"✓";color:#0b1b3a;background:#5eead4;border-radius:50%;display:inline-block;width:22px;height:22px;text-align:center;font-size:13px;line-height:22px;margin-right:10px;font-weight:800}
+.hh .btn{max-width:380px}
+.nums{margin-top:-34px;position:relative;z-index:2}
+.nums .in{background:#fff;border-radius:22px;box-shadow:0 18px 50px rgba(11,27,58,.18);display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:22px;text-align:center}
+.nums b{display:block;font-size:26px;font-weight:800;background:linear-gradient(135deg,var(--deep),var(--t));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nums span{font-size:13px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}@media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
+.card{background:linear-gradient(160deg,#f0fdfa,#e0f2fe);border:1px solid #bae6fd;border-radius:18px;padding:22px;text-align:center}
+.card .ic{font-size:28px}.card h3{font-size:17px;margin:6px 0 4px;color:var(--navy)}.card p{color:var(--mut);font-size:14px}
+.guar{background:var(--g1);color:#fff;border-radius:26px;padding:38px 28px;text-align:center}
+.guar h2{color:#fff;margin-bottom:10px}.guar p{color:#cbd5e1;max-width:620px;margin:0 auto 22px}
+.guar .btn{max-width:380px;margin:0 auto}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.res img{width:100%;border-radius:12px;border:1px solid #e2e8f0}
+.br{text-align:center;color:var(--mut)}.br b{color:var(--ink)}
+footer{padding:22px 0 26px;color:var(--mut);font-size:13px;text-align:center}
+footer a{color:var(--td);font-weight:700;text-decoration:none}
+
+/* 2-bosqich: forma ekrani */
+#p2{min-height:100vh;background:var(--g1);padding:18px 0 40px;position:relative;overflow:hidden}
+#p2:before{content:"";position:absolute;width:520px;height:520px;left:-160px;bottom:-180px;background:radial-gradient(circle,rgba(45,212,191,.25),transparent 65%)}
+.back{display:inline-block;color:#cbd5e1;text-decoration:none;font-weight:700;margin:6px 0 14px;font-size:15px}
+.fw{max-width:480px;margin:0 auto;position:relative}
+.fw h2{color:#fff;text-align:left;margin-bottom:6px}
+.fw .sb{color:#cbd5e1;margin-bottom:18px}
+form{background:#fff;border-radius:24px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
 label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
 label small{color:var(--mut);font-weight:600}
-input{width:100%;font:inherit;font-size:16px;padding:14px;border:2px solid #e2e8f0;border-radius:12px;margin-bottom:14px;outline:0}
-input:focus{border-color:var(--t)}
+input[type=text],input[type=tel]{width:100%;font:inherit;font-size:16px;padding:14px;border:2px solid #e2e8f0;border-radius:12px;margin-bottom:14px;outline:0}
+input[type=text]:focus,input[type=tel]:focus{border-color:var(--t)}
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
 .seg label{margin:0;cursor:pointer}
 .seg input{display:none}
 .seg span{display:block;text-align:center;padding:12px 8px;border:2px solid #e2e8f0;border-radius:12px;font-weight:700;font-size:15px;transition:.15s}
 .seg input:checked+span{border-color:var(--t);background:var(--tl);color:var(--td)}
 .note{font-size:12px;color:var(--mut);text-align:center;margin-top:10px}
-.ok{display:none;text-align:center;padding:24px 0}.ok h3{font-size:22px;margin:8px 0}
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
-.nums b{display:block;font-size:26px;color:var(--td);font-weight:800}.nums span{font-size:13px;color:var(--mut)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.card{background:var(--bg);border:1px solid #e2e8f0;border-radius:16px;padding:20px}
-.card .ic{font-size:26px}.card h3{font-size:17px;margin:6px 0 4px}.card p{color:var(--mut);font-size:14px}
-.guar{background:var(--ink);color:#fff;border-radius:24px;padding:34px 28px;text-align:center}
-.guar h2{color:#fff;margin-bottom:10px}.guar p{color:#cbd5e1;max-width:620px;margin:0 auto 20px}
-.guar .btn{max-width:360px;margin:0 auto}
-.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
-.res img{width:100%;border-radius:12px;border:1px solid #e2e8f0}
-.br{text-align:center;color:var(--mut)}.br b{color:var(--ink)}
-footer{padding:22px 0 26px;color:var(--mut);font-size:13px;text-align:center}
-footer a{color:var(--td);font-weight:700;text-decoration:none}
-.sticky{display:none}
+.ok{display:none;text-align:center;padding:26px 0}.ok h3{font-size:22px;margin:8px 0}
 @media(max-width:760px){
- section{padding:36px 0}
- .hero .g{grid-template-columns:1fr}
- .nums{grid-template-columns:repeat(2,1fr)}
- header .logo span{display:none}
- .sticky{display:block;position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #e2e8f0;z-index:20}
- body{padding-bottom:76px}
+ section{padding:38px 0}
+ .nums .in{grid-template-columns:repeat(2,1fr)}
+ .top .logo span{display:none}
 }
 </style>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1731422865199745&ev=PageView&noscript=1"/></noscript>
 
-<header><div class="w">
- <div class="logo"><img src="https://hilaledu.uz/hilal-logo.png" alt="Hilal Edu" onerror="this.style.display='none'"><span>HILAL EDU</span></div>
- <a class="tel" href="tel:+998555197878">+998 55 519 78 78</a>
-</div></header>
-
-<section class="hero"><div class="w g">
- <div>
+<!-- ============ 1-BOSQICH: SAHIFA ============ -->
+<div id="p1">
+<div class="hero">
+ <div class="top"><div class="w">
+  <div class="logo"><img src="https://hilaledu.uz/hilal-logo.png" alt="Hilal Edu" onerror="this.style.display='none'"><span>HILAL EDU</span></div>
+  <a class="tel" href="tel:+998555197878">+998 55 519 78 78</a>
+ </div></div>
+ <div class="w"><div class="hh">
   <span class="tag">📍 Offlayn va onlayn · Toshkent, Buxoro, Xorazm</span>
   <h1>Turk tilini HILAL EDUda oʻrganing: <span>4 oyda natija yoki pulingiz qaytadi</span></h1>
-  <p>Oʻrta Osiyodagi eng katta turk tili markazi — 12 000+ bitiruvchi.</p>
   <ul class="chk">
-   <li>C1 darajali tajribali ustozlar</li>
+   <li>C1 darajali ustozlar</li>
    <li>Har yakshanba MOCK imtihon</li>
    <li>Natija boʻlmasa — 100% pul qaytariladi</li>
   </ul>
+  <a class="btn" href="#apply">Kursga yozilish</a>
+ </div></div>
+</div>
+
+<div class="nums"><div class="w"><div class="in">
+ <div><b>12 000+</b><span>bitiruvchilar</span></div>
+ <div><b>6+ yil</b><span>tajriba</span></div>
+ <div><b>5 ta</b><span>filial</span></div>
+ <div><b>100+</b><span>xodimlar</span></div>
+</div></div></div>
+
+<section><div class="w">
+ <h2>Nega aynan Hilal Edu?</h2>
+ <div class="cards">
+  <div class="card"><div class="ic">🗣️</div><h3>Konuşma darslari</h3></div>
+  <div class="card"><div class="ic">📝</div><h3>MOCK imtihonlar</h3></div>
+  <div class="card"><div class="ic">🤖</div><h3>Hilal AI yordamchi</h3></div>
+  <div class="card"><div class="ic">🎬</div><h3>Bepul tadbirlar</h3></div>
  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w"><div class="guar">
+ <h2>Natija boʻlmasa — pulingiz qaytariladi!</h2>
+ <p>4 oy ichida natijaga erishmasangiz, toʻlov toʻliq qaytariladi.</p>
+ <a class="btn" href="#apply">Kursga yozilish</a>
+</div></div></section>
+
+<section id="results-sec" style="background:var(--bg)"><div class="w">
+ <h2>Oʻquvchilarimiz natijalari</h2>
+ <div class="res" id="results"></div>
+</div></section>
+
+<section><div class="w br">
+ <p style="margin-bottom:20px"><b>Filiallar:</b> Toshkent · Buxoro · Urganch</p>
+ <a class="btn" style="max-width:380px;margin:0 auto" href="#apply">Kursga yozilish</a>
+</div></section>
+
+<footer><div class="w"><a href="tel:+998555197878">+998 55 519 78 78</a> · <a href="https://t.me/hiloledu_uz">Telegram</a> · <a href="https://instagram.com/hilal_edu_rasmiy">Instagram</a></div></footer>
+</div>
+
+<!-- ============ 2-BOSQICH: LID FORMA ============ -->
+<div id="p2" hidden><div class="w"><div class="fw">
+ <a class="back" href="#top">← Orqaga</a>
+ <h2>Arizani qoldiring</h2>
+ <p class="sb">Menejerimiz siz bilan tez orada bogʻlanib, bepul konsultatsiya beradi.</p>
  <form id="f" novalidate>
   <div id="fields">
-   <h3>Kursga yozilish</h3>
-   <p class="s">Raqamingizni qoldiring — menejer tez orada qoʻngʻiroq qiladi</p>
    <label>Qaysi formatda oʻqimoqchisiz?</label>
    <div class="seg">
     <label><input type="radio" name="fmt" value="Offline" checked><span>🏫 Offlayn</span></label>
@@ -114,60 +165,18 @@ footer a{color:var(--td);font-weight:700;text-decoration:none}
    <input id="phone" type="tel" inputmode="tel" placeholder="+998 90 123 45 67" autocomplete="tel">
    <label for="tg">Telegram username <small>(ixtiyoriy)</small></label>
    <input id="tg" type="text" placeholder="@username" autocomplete="off">
-   <button class="btn" type="submit" id="sb">Kursga yozilish</button>
+   <button class="btn" type="submit" id="sb">Ariza yuborish</button>
    <p class="note">Joylar cheklangan · Maʼlumotlaringiz maxfiy</p>
   </div>
-  <div class="ok" id="ok"><div style="font-size:48px">✅</div><h3>Rahmat! Arizangiz qabul qilindi</h3><p>Menejerimiz tez orada siz bilan bogʻlanadi.</p></div>
+  <div class="ok" id="ok"><div style="font-size:48px">✅</div><h3>Rahmat! Arizangiz qabul qilindi</h3></div>
  </form>
-</div></section>
-
-<section style="padding-bottom:0"><div class="w"><div class="nums">
- <div><b>12 000+</b><span>bitiruvchilar</span></div>
- <div><b>6+ yil</b><span>tajriba</span></div>
- <div><b>5 ta</b><span>filial</span></div>
- <div><b>100+</b><span>xodimlar</span></div>
-</div></div></section>
-
-<section><div class="w">
- <h2>Nega aynan Hilal Edu?</h2>
- <div class="cards">
-  <div class="card"><div class="ic">🗣️</div><h3>Konuşma darslari</h3><p>B1 darajasidan qoʻshimcha speaking darslari — imtihonda yuqori ball uchun.</p></div>
-  <div class="card"><div class="ic">📝</div><h3>MOCK imtihonlar</h3><p>Har yakshanba haqiqiy imtihon muhitida bilimingizni tekshirasiz.</p></div>
-  <div class="card"><div class="ic">🤖</div><h3>Hilal AI yordamchi</h3><p>Darsdan tashqari vaqtda ham AI bilan mashq qilasiz.</p></div>
-  <div class="card"><div class="ic">🎬</div><h3>Bepul tadbirlar</h3><p>Kino, suhbatlar, mafia oʻyini va sayohatlar — oʻquvchilar uchun bepul.</p></div>
- </div>
-</div></section>
-
-<section style="padding-top:0"><div class="w"><div class="guar">
- <h2>Natija boʻlmasa — pulingiz qaytariladi!</h2>
- <p>Darslarga toʻliq qatnashib, vazifalarni bajarib, 4 oy ichida natijaga erisha olmasangiz, toʻlovingiz toʻliq qaytariladi.</p>
- <a class="btn" href="#top">Kursga yozilish</a>
-</div></div></section>
-
-<section id="results-sec" style="background:var(--bg)"><div class="w">
- <h2>Oʻquvchilarimiz natijalari</h2>
- <div class="res" id="results"></div>
-</div></section>
-
-<section><div class="w br">
- <p><b>Filiallar:</b> Novza (Asosiy), Novza (Asaxiy), Olmazor — Toshkent · Buxoro · Urganch</p>
- <p style="margin:8px 0 20px">Har kuni 09:00 — 21:00</p>
- <a class="btn" style="max-width:360px;margin:0 auto" href="#top">Kursga yozilish</a>
-</div></section>
-
-<footer><div class="w">
- <p>Toshkent sh., Chilonzor, Muqumiy koʻchasi (Novza metrosi yonida)</p>
- <p style="margin:4px 0"><a href="tel:+998555197878">+998 55 519 78 78</a> · <a href="https://t.me/hiloledu_uz">Telegram</a> · <a href="https://instagram.com/hilal_edu_rasmiy">Instagram</a></p>
- <p>© 2026 Hilal Edu</p>
-</div></footer>
-
-<div class="sticky"><a class="btn" href="#top">Kursga yozilish</a></div>
+</div></div></div>
 
 <script>
-// ===== SOZLAMA: Make.com / n8n webhook URL =====
+// ===== SOZLAMA =====
 const WEBHOOK_URL = "https://hook.us2.make.com/opt4yw38qdbyw2uevm7dn8nygidj9t7r";
 
-// Natija rasmlari: results/1.jpg ... results/6.jpg (papkaga oʻzingiz qoʻyasiz). Hech biri topilmasa, boʻlim yashirinadi.
+// Natija rasmlari: results/1.jpg ... results/6.jpg. Topilmasa, boʻlim yashirinadi.
 (function(){
   const box = document.getElementById("results");
   let bad = 0, N = 6;
@@ -180,13 +189,18 @@ const WEBHOOK_URL = "https://hook.us2.make.com/opt4yw38qdbyw2uevm7dn8nygidj9t7r"
   }
 })();
 
-// "Kursga yozilish" tugmalari formani ochadi
-document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener("click", e => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  setTimeout(() => document.getElementById("name").focus({ preventScroll: true }), 500);
-}));
+// 1-bosqich <-> 2-bosqich (#apply)
+const p1 = document.getElementById("p1"), p2 = document.getElementById("p2");
+function route() {
+  const a = location.hash === "#apply";
+  p1.hidden = a; p2.hidden = !a;
+  window.scrollTo(0, 0);
+  if (a) setTimeout(() => document.getElementById("name").focus({ preventScroll: true }), 150);
+}
+window.addEventListener("hashchange", route);
+route();
 
+// Telefon maskasi
 const ph = document.getElementById("phone");
 ph.addEventListener("focus", () => { if (!ph.value) ph.value = "+998 "; });
 ph.addEventListener("input", () => {
@@ -201,9 +215,11 @@ ph.addEventListener("input", () => {
   ph.value = o;
 });
 
+// UTM / fbclid
 const q = new URLSearchParams(location.search), utm = {};
 ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","fbclid"].forEach(k => { if (q.get(k)) utm[k] = q.get(k); });
 
+// Yuborish: Lead eventi faqat "Ariza yuborish" bosilib, forma toʻgʻri boʻlganda ketadi
 document.getElementById("f").addEventListener("submit", async e => {
   e.preventDefault();
   const n = document.getElementById("name"), name = n.value.trim();
@@ -213,12 +229,12 @@ document.getElementById("f").addEventListener("submit", async e => {
   if (!a || !b) return;
   const btn = document.getElementById("sb");
   btn.disabled = true; btn.textContent = "Yuborilmoqda...";
-  const payload = { name, phone, telegram: tg ? "@" + tg.replace(/^@/, "") : "", course: (document.querySelector('input[name="fmt"]:checked')||{}).value || "Offline", page: location.href.split("?")[0], ...utm, time: new Date().toISOString() };
+  if (window.fbq) fbq("track", "Lead");
+  const payload = { name, phone, telegram: tg ? "@" + tg.replace(/^@/, "") : "", course: (document.querySelector('input[name="fmt"]:checked')||{}).value || "Offline", page: location.href.split("?")[0].split("#")[0], ...utm, time: new Date().toISOString() };
   try {
     if (WEBHOOK_URL) await fetch(WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
     else console.log("LEAD", payload);
   } catch (err) { console.error(err); }
-  if (window.fbq) fbq("track", "Lead");
   document.getElementById("fields").style.display = "none";
   document.getElementById("ok").style.display = "block";
 });
